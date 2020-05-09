@@ -2,7 +2,9 @@ const db = require('../database/db');
 
 exports.showCourses = async (req, res, next) =>{
     try{
+    
         const courses = await db.Course.findAll({})
+        console.log(req.decoded)
         res.status(200).json(courses)
     }
     catch(err){
