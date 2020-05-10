@@ -65,7 +65,48 @@ exports.deleteCourses= async (req, res, next) => {
         }
     }
     catch(err){
-        res.status(400)
+        res.status(400);
+        next(err)
+    }
+};
+
+exports.showCourseVideos = async (req,res,next)=>{
+    try{
+        const {id} = req.params;
+        const videos = await db.Video.findAll({where:{courseId: id}});
+        res.status(200).json(videos)
+    }
+    catch(err){
+        res.status(400);
+        next(err)
+    }
+};
+
+exports.enroll = async(req, res, next) =>{
+    try{
+        const {id} = req.params;
+        const userId = 1;
+        const subscribe = await db.Course_Student.create({
+            studentId: userId,
+            courseId : id
+        });
+        console.log('SubBBBBBBBB',subscribe)
+        res.status(201).json(subscribe);
+    }
+    catch(err) {
+        res.status(400);
+        next(err)
+    }
+};
+exports.showCoursesByCategory = async (req, res, next) =>{
+    try{
+        const {name} = req.params;
+        const category = await db.Category.findOne({where : {name : name}});
+        const courses = await db.Course.findAll({where : {categoryId : category.id}});
+        res.status(200).json(courses)
+    }
+    catch(err){
+        res.status(400);
         next(err)
     }
 }

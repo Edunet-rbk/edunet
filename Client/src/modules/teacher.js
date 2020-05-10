@@ -4,6 +4,26 @@ import React from 'react';
 export default class Teacher extends React.Component{
     constructor(props){
         super(props);
+        this.state= {
+            id : props.match.params.id,
+            data : null
+        }
+        this.fetchData();
+        console.log(props.match.params.id)
+    }
+
+    fetchData(){
+        fetch(`http://localhost:8080/teachers/public/${this.state.id}`, {
+            method : 'GET'
+        })
+        .then(response =>{
+            return response.text()
+        }).then(data => {
+            console.log(data)
+            this.setState({
+                data : JSON.parse(data)
+            })
+        })
     }
 
     render(){

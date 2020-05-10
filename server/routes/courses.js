@@ -13,5 +13,6 @@ router
     .route('/:id')
     .get(handler.getCourse)
     .delete(handler.deleteCourses)
+    .post(handler.enroll);
 
 module.exports = router;
