@@ -9,7 +9,6 @@ export default class Teacher extends React.Component{
             data : null
         }
         this.fetchData();
-        console.log(props.match.params.id)
     }
 
     fetchData(){

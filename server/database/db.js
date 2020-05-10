@@ -1,10 +1,8 @@
 const db = require('sequelize');
 
-<<<<<<< HEAD
+
 const sql = new db('edunet','root','root',{dialect: 'mysql'});
-=======
-const sql = new db('edunet','root', 'root' ,{dialect: 'mysql'});
->>>>>>> ddbb9482c2816697b4930f9c8f628390da797d81
+
 
 const student = sql.define('student',{
     first_name : db.STRING,
@@ -146,3 +144,5 @@ module.exports.Course = course;
 module.exports.Video = video;
 module.exports.Teacher = teacher;
 module.exports.Course_Student = course_student;
+module.exports.Category = category;
+module.exports.sql = sql;

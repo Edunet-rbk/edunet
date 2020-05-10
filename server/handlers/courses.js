@@ -25,9 +25,10 @@ exports.createCourses = async (req, res, next) => {
         const course = await db.Course.create({
             title,
             description,
-            category,
-            photo
-        })
+            categoryId,
+            photo : photo || "https://smartmobilestudio.com/wp-content/uploads/2012/06/leather-book-preview.png",
+            teacherId
+        });
         res.status(201).json(course)
     }
     catch(err){
@@ -38,8 +39,9 @@ exports.createCourses = async (req, res, next) => {
 
 exports.getCourse = async (req, res, next) => {
     try{
-        const {id} = req.params
-        const course = await db.Course.findOne({where: {id : id}})
+        
+        const {id} = req.params;
+        const course = await db.Course.findOne({where: {id : id}});
 
         if (!course){
             res.status(404).json(" No course with this id")
@@ -85,7 +87,7 @@ exports.showCourseVideos = async (req,res,next)=>{
 exports.enroll = async(req, res, next) =>{
     try{
         const {id} = req.params;
-        const userId = 1;
+        const userId = 2;
         const subscribe = await db.Course_Student.create({
             studentId: userId,
             courseId : id

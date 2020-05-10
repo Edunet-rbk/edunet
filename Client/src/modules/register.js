@@ -29,7 +29,6 @@ export default class Register extends React.Component{
     handlSubmit(event){
         event.preventDefault();
         let user = this.state;
-        console.log(user);
         fetch("http://localhost:8080/auth/signup",{
             method : 'POST',
             headers : {
@@ -72,9 +71,7 @@ export default class Register extends React.Component{
                           </div>
                       </div>
                       <div className='row'>
-                          <de}));
-
-app.use('/auth', routes.auth)iv className='col-md'>
+                          <div className='col-md'>
                               <input className='form-control' type='password' placeholder='Password' name='password'onChange={this.handleInput.bind(this)}/>
                           </div>
                       </div>

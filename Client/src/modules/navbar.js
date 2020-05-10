@@ -10,7 +10,6 @@ export default class Navbar extends React.Component{
             value : '',
             user : props.user
         }
-        console.log('prrrrrrrrrrrrrooooooooops',props)
     }
 
     componentWillReceiveProps(nextProps){
@@ -55,9 +54,6 @@ export default class Navbar extends React.Component{
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                         <Link to= "/search"><button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></Link>
                     </form>
-<<<<<<< HEAD
-                </nav>
-=======
                     {this.state.user.auth === false ? 
                         <button href="#" data-target="#SignIn" data-toggle="modal" className="btn btn-outline-success my-2 my-sm-0 ml-3">Your Account</button>
                         :<div>
@@ -93,7 +89,6 @@ export default class Navbar extends React.Component{
                             </div>
                     </div>
                 </div>
->>>>>>> ddbb9482c2816697b4930f9c8f628390da797d81
             </div>
         )
     }
