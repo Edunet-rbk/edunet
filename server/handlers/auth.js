@@ -32,8 +32,8 @@ exports.signUp = async(req, res, next) => {
                 password : hashedPassword,
                 photo : req.body.photo || "https://microhealth.com/assets/images/illustrations/personal-user-illustration-@2x.png"
             });
-            const {id, email} = student
-            const token = jwt.sign({id, email}, process.env.SECRET)
+            const {id, email} = student;
+            const token = jwt.sign({id, email}, process.env.SECRET);
             res.status(201).json({id, email, token})
         }
     }

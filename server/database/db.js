@@ -1,8 +1,6 @@
 const db = require('sequelize');
 
-
-const sql = new db('edunet','root','root',{dialect: 'mysql'});
-
+const sql = new db('edunet','root', '' ,{dialect: 'mysql'});
 
 const student = sql.define('student',{
     first_name : db.STRING,
@@ -30,12 +28,6 @@ const student = sql.define('student',{
 });
 
 
-/*const university = sql.define('University', {
-    name : {
-        type: db.STRING,
-        unique : true
-    }
-});*/
 
 const teacher = sql.define('teacher',{
     first_name : db.STRING,
@@ -67,7 +59,6 @@ const teacher = sql.define('teacher',{
 
 const course = sql.define('course',{
     title : db.STRING,
-    category : db.STRING,
     description :db.STRING,
     photo : db.STRING,
     createdAt: {
@@ -113,10 +104,11 @@ student.belongsToMany(course, {through: course_student});
 course.belongsToMany(student, {through: course_student});
 
 
-course.hasOne(teacher);
-teacher.hasMany(course);
+course.belongsTo(teacher);
+teacher.hasMany(course, {foreignKey: "teacherId"});
+
 video.belongsTo(course);
-course.hasMany(video);
+course.hasMany(video, {foreignKey: "courseId"});
 
 /*teacher.belongsTo(university);
 university.hasMany(teacher);*/
@@ -143,6 +135,6 @@ module.exports.Student = student;
 module.exports.Course = course;
 module.exports.Video = video;
 module.exports.Teacher = teacher;
-module.exports.Course_Student = course_student;
 module.exports.Category = category;
+module.exports.Course_Student = course_student;
 module.exports.sql = sql;

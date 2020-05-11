@@ -1,10 +1,15 @@
 import React from 'react';
-import {BrowserRouter , Route}from 'react-router-dom';
+import {BrowserRouter , Route, Router}from 'react-router-dom';
 import Home from './modules/home';
 import Navbar from './modules/navbar';
 import Courses from './modules/courses';
-import Teacher from './modules/teacher'
-import Search from "./modules/search"
+import Teacher from './modules/teacher';
+import Search from "./modules/search";
+import Course from './modules/course';
+import Teachers from './modules/teachers/teachers'
+import SearchByCategory  from './modules/searchbycategory';
+
+import TeacherLog from './modules/profile/teacherlog'
 
 import StudentLog from './modules/profile/studentlog'
 
@@ -48,8 +53,12 @@ export default class App  extends React.Component {
   render(){
     return (
       <BrowserRouter>
-        <div className='container'>
+        <div>
           <Navbar user={this.state} logout={this.logout.bind(this)} login={this.loggedIn.bind(this)}/>
+
+   
+          
+
           <Route exact path='/' component={Home}></Route>
           <Route path='/teachers' component={Teachers}></Route>
           <Route path='/courses' component={Courses}></Route>

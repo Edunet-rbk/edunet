@@ -1,13 +1,13 @@
 const router = require('express').Router();
 
-const auth = require('../middlewares/auth')
 const handler = require('../handlers');
+const auth = require('../middlewares/auth');
 
 router
     .route('/')
-    .get(auth,handler.showCourses)
+    .get(handler.showCourses)
 
-    .post(handler.createCourses)
+    .post(handler.createCourses);
 
 router
     .route('/')

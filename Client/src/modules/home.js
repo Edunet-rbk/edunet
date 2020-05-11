@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Form from './home_components/featureForm';
+
 import FeatureCategory from './home_components/featureCategory';
 import FeatureCourses from './home_components/featureCourses';
 import FeatureTeachers from './home_components/featureTeachers';
@@ -16,12 +16,14 @@ export default class Home extends React.Component {
     render(){
         return(
             <div>
-            
-            <Form/>
-            <FeatureTeachers/>
-            <FeatureCourses/>
-            <FeatureCategory/>
-            <ChooseUs/>
+                  
+              <video id="videoBG"  autoPlay muted  loop
+              src="./style/vid1.mp4" type="video/mp4"/>
+              <div className="content"><h1>Edunet</h1></div>
+                <FeatureTeachers/>
+                <FeatureCourses/>
+                <FeatureCategory/>
+                <ChooseUs/>
             </div>
         )
     }
