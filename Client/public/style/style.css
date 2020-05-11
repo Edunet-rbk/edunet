@@ -62,7 +62,6 @@ body{
 
 .card{
     display: grid;
-    grid-template-columns: 250px;
     grid-template-rows: 150px 120px 80px;
     grid-template-areas: "image" "text" "stat";
     font-family: roboto;
@@ -83,6 +82,11 @@ a:link, a:visited{
     text-decoration: none;
 
 }
+
+.card-body{
+    text-align: center;
+}
+
 .card-img-top{
    grid-area: image;
    border-top-left-radius: 15px ;
@@ -90,7 +94,6 @@ a:link, a:visited{
    background-size: cover;
     max-height: 180px;
     max-width: 180px;
-    margin-left: 30%;
     margin-top: 5px;
     
     
@@ -122,3 +125,21 @@ a:link, a:visited{
     border: 1px solid white;
 }
 
+.form-c{
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.descr {
+    font-size: 36px;
+    color: white;
+    font-weight: bolder;
+}
+
+.desc {
+    color: snow;
+}
+
+.bordure {
+    border-bottom:2px solid goldenrod;
+    }

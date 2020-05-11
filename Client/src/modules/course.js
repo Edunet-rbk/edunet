@@ -143,11 +143,12 @@ export default class Course extends React.Component{
                         </ul>
                         <div className="tab-content">
                         <div className="tab-pane container active" id="description">
-                            <div className="card">
+                            <div className="container">
                                 <img src={this.state.data === null ? '' : this.state.data.course.photo} className="card-img-top" alt="..."></img>
-                                <div className="card-body">
-                                    <h5 className="card-title">{this.state.data !== null ? this.state.data.course.title: ''}</h5>
-                                    <p className="card-text">{this.state.data !== null ? this.state.data.course.description: ''}</p>
+                                <div>
+                                    <h3 className="descr">{this.state.data !== null ? this.state.data.course.title: ''}</h3>
+                                    <br></br><div className="bordure"></div><br></br>
+                                    <p className="desc">{this.state.data !== null ? this.state.data.course.description: ''}</p>
                                 </div>
                             </div>
                         </div>
