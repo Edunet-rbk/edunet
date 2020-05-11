@@ -45,7 +45,7 @@ export default class Search extends React.Component{
                                 <h4 className='card-title'>{element2.title}</h4>
                                 <p className='card-text'>{element2.description}</p>
                                 <Link to={`/course/${element2.id}`}>
-                                    <h4>Check Course</h4>
+                                    <button className='btn btn-success'>Check Course</button>
                                 </Link>
                             </div>
                         </div>

@@ -3,13 +3,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url("./bck.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: goldenrod;
-    
-
-    
+    background-color: #001F3D  ;
+    color: #1477B2; 
 }
 #videoBG {
 
@@ -20,9 +15,8 @@ body{
   object-fit: cover;
 }
   .content {
-  bottom: 0;
+    text-align: center;
   color: #f1f1f1;
-  width: 100vw;
 
 }
 
@@ -55,29 +49,25 @@ body{
   }
 
 
-
-
-
-
-
 .card{
     display: grid;
     grid-template-rows: 150px 120px 80px;
     grid-template-areas: "image" "text" "stat";
     font-family: roboto;
     border-radius: 8px;
-    background: rgba(1, 50, 83, 0.041);
+    background: rgba(0, 30, 61, 0.109);
     box-shadow: 5px 5px 15px rgb(5, 5, 5);
     text-align: center;
     margin-top: 10px;
-    
+    font-weight: bolder;
 }
 .card:hover{
-    background: rgba(0, 0, 0, 0.808);
+    background: goldenrod;
     font-size: 15px;
-    color: blanchedalmond;
+    color: #5b5a5f;
 }
 a:link, a:visited{
+    font-weight: bold;
     color: white;
     text-decoration: none;
 
@@ -95,8 +85,7 @@ a:link, a:visited{
     max-height: 180px;
     max-width: 180px;
     margin-top: 5px;
-    
-    
+    margin-left: 20%;
     border-radius: 10%;
     border: transparent;
 
@@ -105,7 +94,7 @@ a:link, a:visited{
 .card-title{
     grid-area: text;
     margin: 25px;
-    color: goldenrod;
+    color: #1477B2;
     font-size: 16px;
     font-weight: 300;
     
@@ -142,4 +131,9 @@ a:link, a:visited{
 
 .bordure {
     border-bottom:2px solid goldenrod;
-    }
+}
+
+.featureCourses,  .featureCategories, .featureTeachers{
+    border: 2px solid goldenrod;
+}
+    

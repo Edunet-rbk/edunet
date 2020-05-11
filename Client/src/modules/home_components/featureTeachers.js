@@ -31,7 +31,8 @@ export default class FeatureTeachers extends React.Component {
 
     render(){
         return(
-            <div className="featureTeachers">
+            <div className="featureTeachers mb-5">
+                <h1 className='content'>Teachers</h1>
                 <div className='row'>
                     {this.state.teachers.map((element, idx)=>{
                         return(

@@ -28,7 +28,8 @@ export default class FeatureCategory extends React.Component {
 
     render() {
         return (
-            <div className="featureCategory">
+            <div className="featureCategories mb-5">
+                <h1 className='content'>Categories</h1>
                 <div className='row'>
                     {this.state.categories.map((element, idx) => {
                         return (
