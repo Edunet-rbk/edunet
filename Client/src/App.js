@@ -58,17 +58,19 @@ export default class App  extends React.Component {
 
    
           
-
-          <Route exact path='/' component={Home}></Route>
-          <Route path='/teachers' component={Teachers}></Route>
-          <Route path='/courses' component={Courses}></Route>
-          <Route path='/teacher/:id' component={Teacher}></Route>
-          <Route path='/search/:value' component={Search}></Route>
-          <Route path='/teacherprofile/:id' component={TeacherLog}/>
-          <Route path='/course/:id' component={Course}/>
-          <Route path='/searchByCategory/:category' component={SearchByCategory}/>
-          <Route path='/createcourse/:id' component={CreateCourse}/>
-          <Route path='/studentprofile/:id' component={StudentLog}/>
+        
+            <Route exact path='/' component={Home}></Route>
+            <div className='container'>
+            <Route path='/teachers' component={Teachers}></Route>
+            <Route path='/courses' component={Courses}></Route>
+            <Route path='/teacher/:id' component={Teacher}></Route>
+            <Route path='/search/:value' component={Search}></Route>
+            <Route path='/teacherprofile/:id' component={TeacherLog}/>
+            <Route path='/course/:id' component={Course}/>
+            <Route path='/searchByCategory/:category' component={SearchByCategory}/>
+            <Route path='/createcourse/:id' component={CreateCourse}/>
+            <Route path='/studentprofile/:id' component={StudentLog}/>
+          </div>
        </div>
     </BrowserRouter>
     );

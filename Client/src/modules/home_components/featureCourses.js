@@ -31,7 +31,8 @@ export default class FeatureCourses extends React.Component {
 
     render(){
         return(
-            <div className='featureCourses'>
+            <div className='featureCourses mb-5'>
+                <h1 className='content'>Courses</h1>
                 <div className="row">
                     {this.state.courses.slice(0,3).map((element, idx)=>{
                         return(

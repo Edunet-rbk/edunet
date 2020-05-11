@@ -42,7 +42,6 @@ export default class Courses extends React.Component{
                                     <img src={element.photo} className='card-img-top' alt='pic'></img>
                                     <div className='card-body'>
                                         <h3 className='card-title'>{element.title}</h3>
-                                        <p className='card-text'>{element.description}</p>
                                     </div>
                                     <Link to={'/course/'+element.id}><button className='btn btn-success'>Check Course</button></Link>
                                 </div>
