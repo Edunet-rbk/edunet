@@ -53,7 +53,7 @@ export default class App  extends React.Component {
   render(){
     return (
       <BrowserRouter>
-        <div >
+        <div>
           <Navbar user={this.state} logout={this.logout.bind(this)} login={this.loggedIn.bind(this)}/>
 
    

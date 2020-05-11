@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url("./smoke.jpg");
+    background-image: url("./bck.png");
     background-repeat: no-repeat;
     background-size: cover;
     color: goldenrod;
@@ -42,8 +42,8 @@ body{
 .navbar-dark.nav-item.active .nav-link,
 .navbar-dark .nav-item:focus .nav-link,
 .navbar-dark .nav-item:hover .nav-link{
-    background-color: white;
-    color: #3A1264;
+    background-color: rgb(36, 15, 231);
+    color: rgb(11, 155, 18);
     font-weight: 700;
     border-radius: 10px 0 0 0;
 
@@ -62,19 +62,24 @@ body{
 
 .card{
     display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 210px 120px 80px;
+    grid-template-columns: 250px;
+    grid-template-rows: 150px 120px 80px;
     grid-template-areas: "image" "text" "stat";
     font-family: roboto;
-    border-radius: 18px;
+    border-radius: 8px;
     background: rgba(1, 50, 83, 0.041);
-    box-shadow: 5px 5px 15px goldenrod;
+    box-shadow: 5px 5px 15px rgb(5, 5, 5);
     text-align: center;
+    margin-top: 10px;
     
+}
+.card:hover{
+    background: rgba(0, 0, 0, 0.808);
+    font-size: 15px;
+    color: blanchedalmond;
 }
 a:link, a:visited{
     color: white;
-    
     text-decoration: none;
 
 }
@@ -104,10 +109,6 @@ a:link, a:visited{
 
 }
 .card-text{
-    grid-area: stats;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 100px 100px;
     border-bottom-left-radius: 15px;
     display: flex;
     align-items: center;
