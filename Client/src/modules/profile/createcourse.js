@@ -42,7 +42,7 @@ export default class CreateCourse extends React.Component{
         return(
             <div>
             <form>
-                  <div className='form-group'>
+                  <div className='form-group form-c'>
                       <div className='row'>
                           <div className='col-md-4'>
                               <input className='form-control' type='text' placeholder='Title' name='title' onChange={this.handleInput.bind(this)}/>
