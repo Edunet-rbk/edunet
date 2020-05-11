@@ -53,10 +53,6 @@ export default class App  extends React.Component {
           <Route exact path='/' component={Home}></Route>
           <Route path='/teachers' component={Teachers}></Route>
           <Route path='/courses' component={Courses}></Route>
-<<<<<<< HEAD
-          <Route path='/teacher' component={Teacher}></Route>
-          <Route path='/search' component={Search}></Route>
-=======
           <Route path='/teacher/:id' component={Teacher}></Route>
           <Route path='/search/:value' component={Search}></Route>
           <Route path='/teacherprofile/:id' component={TeacherLog}/>
@@ -64,7 +60,6 @@ export default class App  extends React.Component {
           <Route path='/searchByCategory/:category' component={SearchByCategory}/>
           <Route path='/createcourse/:id' component={CreateCourse}/>
           <Route path='/studentprofile/:id' component={StudentLog}/>
->>>>>>> ddbb9482c2816697b4930f9c8f628390da797d81
        </div>
     </BrowserRouter>
     );

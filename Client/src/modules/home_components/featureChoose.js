@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 export default class ChooseUs extends React.Component{
     render(){
         return(
